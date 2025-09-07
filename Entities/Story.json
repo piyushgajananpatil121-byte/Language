@@ -1,0 +1,57 @@
+{
+  "name": "Story",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the story"
+    },
+    "audio_url": {
+      "type": "string",
+      "description": "URL to the recorded story audio"
+    },
+    "transcription": {
+      "type": "string",
+      "description": "Transcribed text in native script"
+    },
+    "translation": {
+      "type": "string",
+      "description": "Translation in common language"
+    },
+    "story_type": {
+      "type": "string",
+      "enum": [
+        "folktale",
+        "song",
+        "ritual",
+        "personal_story",
+        "proverb",
+        "other"
+      ],
+      "default": "other",
+      "description": "Type of story"
+    },
+    "dialect": {
+      "type": "string",
+      "description": "Specific dialect or language"
+    },
+    "duration_seconds": {
+      "type": "number",
+      "description": "Length of the audio in seconds"
+    },
+    "listen_count": {
+      "type": "number",
+      "default": 0,
+      "description": "How many times this story has been played"
+    },
+    "is_transcribed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the story has been transcribed"
+    }
+  },
+  "required": [
+    "title",
+    "audio_url"
+  ]
+}
