@@ -1,0 +1,66 @@
+{
+  "name": "Word",
+  "type": "object",
+  "properties": {
+    "word_audio_url": {
+      "type": "string",
+      "description": "URL to the recorded word audio"
+    },
+    "word_text": {
+      "type": "string",
+      "description": "The word in native script or phonetic"
+    },
+    "meaning": {
+      "type": "string",
+      "description": "What the word means"
+    },
+    "translation": {
+      "type": "string",
+      "description": "Translation in common language (Hindi/English)"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "noun",
+        "verb",
+        "adjective",
+        "greeting",
+        "household",
+        "nature",
+        "family",
+        "food",
+        "emotion",
+        "other"
+      ],
+      "default": "other",
+      "description": "Word category"
+    },
+    "example_sentence": {
+      "type": "string",
+      "description": "Example sentence using the word"
+    },
+    "example_audio_url": {
+      "type": "string",
+      "description": "Audio of the example sentence"
+    },
+    "dialect": {
+      "type": "string",
+      "description": "Specific dialect or language"
+    },
+    "listen_count": {
+      "type": "number",
+      "default": 0,
+      "description": "How many times this word has been played"
+    },
+    "is_verified": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this contribution has been verified"
+    }
+  },
+  "required": [
+    "word_audio_url",
+    "meaning",
+    "translation"
+  ]
+}
